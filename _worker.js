@@ -11,7 +11,7 @@ async function handleRequest() {
         if (!response.ok) { // 如果状态码不是200-299之间
             console.error(`Resource ${urlToCheck} is fail with status ${response.status}`);
         }
-        console.log("===============[end]================");
+        console.log(`===============[end] with status ${response.status}================`);
         return new Response('Check completed.', { status: 200 });
     } catch (error) {
         console.error(`Failed to reach resource ${urlToCheck}: ${error.message}`);
